@@ -1,0 +1,14 @@
+body{
+    background-color: cadetblue;
+}
+
+#text{
+    font-size: 20px;
+    color: blanchedalmond;
+}
+
+#line{
+    height:5px;
+    background-color: black;
+    border-radius: 10%;
+}
