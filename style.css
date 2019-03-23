@@ -2,8 +2,9 @@ body{
     background-color: cadetblue;
 }
 
-#text{
-    font-size: 20px;
+#text li{
+    font-size: 18px;
+   
     color: blanchedalmond;
 }
 
@@ -11,4 +12,11 @@ body{
     height:5px;
     background-color: black;
     border-radius: 10%;
+}
+#beach{
+    width: 650px;
+    height: 430px;
+    background: url(./cat.jpg) no-repeat;
+    border: 3px solid black;
+    background-position: 0px -30px;
 }
