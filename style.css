@@ -13,10 +13,8 @@ body{
     background-color: black;
     border-radius: 10%;
 }
-#beach{
+#cat{
     width: 650px;
     height: 430px;
-    background: url(cat.JPG) no-repeat;
     border: 3px solid black;
-    
 }
