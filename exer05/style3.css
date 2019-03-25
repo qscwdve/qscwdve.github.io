@@ -1,0 +1,17 @@
+
+#red{
+    background: #f00;
+}
+#blue{
+    background: #00f;
+}
+#green{
+    background: green;
+}
+
+.box{
+    border: 1px solid black;
+    width: 25px;
+    height: 25px;
+    display: inline-block;
+}
