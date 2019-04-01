@@ -1,0 +1,25 @@
+input{
+    font-size: 1.5em;
+    text-align: right;
+}
+#main{
+    border: 1px solid #aaa;
+    width: 400px;
+    height: 300px;
+    padding: 30px;
+}
+select{
+    width: 100%;
+}
+
+button{
+    background-color: #e5f; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-top: 10px;
+}
