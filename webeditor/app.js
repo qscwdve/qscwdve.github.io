@@ -12,8 +12,8 @@ window.onload = function(){
         mf.open();
         mf.writeln(
             t_html
-        )
-        mf.closest();
+        );
+        mf.close();
     }
   
 }
