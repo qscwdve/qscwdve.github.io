@@ -1,9 +1,9 @@
 body{
     background-color: pink;
 }
-#text li{
+#text{
     font-size: 18px;
-    width: 95px;
+    width: 120px;
 }
 
 #line{
@@ -16,7 +16,7 @@ body{
     height: 500px;
     border: 3px solid black;
 }
-#text2 li{
+#text2{
     font-size: 18px;
-    width: 105px;
+    width: 270px;
 }
