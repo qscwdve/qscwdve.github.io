@@ -1,0 +1,36 @@
+#main{
+    border: 1px solid #aaa;
+    width: 800px;
+    min-height: 500px;
+    margin: auto;
+}
+h1{
+    text-align: center;
+}
+#entry{
+    font-size: 1.2em;
+}
+#entry div{
+    text-align: right;
+    width: 500px;
+    margin: auto;
+
+}
+#entry div input{
+    padding: 5px;
+    width: 300px;
+    margin-bottom: 5px;
+}
+#entry div button{
+    padding: 5px;
+    width: 100px;
+    border: 1px solid black;
+}
+#datax tr:nth-child(odd){
+    background-color: coral;
+    
+}
+#datax tr:nth-child(even){
+    background-color: blueviolet;
+    
+}
