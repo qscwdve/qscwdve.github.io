@@ -120,7 +120,6 @@ function showOrderData(type, order) {
     tb = document.querySelector("#table");
     tb.innerHTML = "";
 
-
     for (i = 0; i < data.length; i++) {
      
         t1 = document.createElement("td");

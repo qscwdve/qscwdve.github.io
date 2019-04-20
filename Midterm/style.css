@@ -81,3 +81,6 @@ table input{
 tr:nth-child(even){
     background-color: beige;
 }
+#copy{
+    text-align: center;
+}
