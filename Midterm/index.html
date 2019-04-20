@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Midterm-project</title>
+    <script src="app.js"></script>
+    <link rel="stylesheet" type = "text/css" href="style.css">
+</head>
+<body>
+    <div id="main">
+    <svg id="animation">
+        <rect width="80" height="70" y="10"></rect>
+        <text x="20" y="60" >김</text>
+        <rect width="80" height="70" x="95" y="10"></rect>
+        <text x="115" y="60" >윤</text>
+        <rect width="80" height="70" x="190" y="10"></rect>
+        <text x="210" y="60" >희</text>
+    </svg><br>
+    <b>international company</b>
+    
+    <h1>Product Information</h1>
+    <div id="box">
+        <div><b>Name&nbsp;&nbsp;</b> <input type="text" id="product_name" ></div>
+        <div id="text"><b>Price&nbsp;&nbsp;&nbsp;</b> <input type="text" id="product_price"></div>
+        <button id="save">save</button>
+    </div>
+</br>
+    <table>
+        <tr>
+            <th onclick="idClick()" id="id">▼ ID</th> 
+            <th onclick="nameClick()" id="name">▼ Name</th>
+            <th onclick="priceClick()" id="price">▼ PRICE</th>
+        </tr>
+        <tbody id="table">
+
+        </tbody>
+    </table>    
+    &copy;2019. 김윤희
+    </div>
+</body>
+</html>
