@@ -137,8 +137,8 @@ function showOrderData(type, order) {
         mtr = document.createElement("tr");
  
         t1.innerText = data[i].id;
-        t2.innerHTML = "<input onkeydown='ch("+i+",1)' onclick ='change("+i+",1)' type='text' id='name"+i+"' value='"+data[i].name+"' style='border: none;'>";
-        t3.innerHTML = "<input onkeydown='ch("+i+",2)' onclick ='change("+i+",2)' type='text' id='price"+i+"' value='"+data[i].price+"' style='border: none;'>";
+        t2.innerHTML = "<input onkeydown='change("+i+",1)' type='text' id='name"+i+"' value='"+data[i].name+"' style='border: none;'>";
+        t3.innerHTML = "<input onkeydown='change("+i+",2)' type='text' id='price"+i+"' value='"+data[i].price+"' style='border: none;'>";
 
         mtr.append(t1);
         mtr.append(t2);
@@ -146,12 +146,11 @@ function showOrderData(type, order) {
         tb.append(mtr);
     }
 }
-function ch(pp,check) {
+function change(pp,check) {
     evt = event.key;
     if(check == 1){
         if(evt == "Escape"){
-            document.querySelector("#name"+pp+"").readOnly = true;
-            document.querySelector("#name"+pp+"").style.outline = 'none';
+            showOrderData(-1,-1);
         }
         else if(evt == "Enter"){
             data[pp].name = document.querySelector("#name"+pp+"").value;
@@ -159,21 +158,10 @@ function ch(pp,check) {
     }
     else{
         if(evt == "Escape"){
-            document.querySelector("#price"+pp+"").readOnly = true;
-            document.querySelector("#price"+pp+"").style.outline = 'none';
+            showOrderData(-1,-1);
         }
         else if(evt == "Enter"){
             data[pp].price = document.querySelector("#price"+pp+"").value;
         }
-    }
-}
-function change(pp,check) {
-    if(check == 1){
-        document.querySelector("#name"+pp+"").readOnly = false;
-        document.querySelector("#name"+pp+"").style.outline = '';
-    }
-    else{
-        document.querySelector("#price"+pp+"").readOnly = false;
-        document.querySelector("#price"+pp+"").style.outline = '';
     }
 }
