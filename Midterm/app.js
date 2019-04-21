@@ -13,14 +13,17 @@ data = [
     }
 ];
 
-window.onload = init;
+var orderCheckid = true;
+var orderCheckname = true;
+var orderCheckprice = true;
 
 var idorder = data.length;
 let name;
 let price;
-var orderCheckid = true;
-var orderCheckname = true;
-var orderCheckprice = true;
+
+
+
+window.onload = init;
 
 function init() {
     document.querySelector("#save").onclick = savedata;
@@ -44,22 +47,28 @@ function savedata() {
 
 function idClick() {
     showOrderData(1, orderCheckid);
+    if(orderCheckid) document.querySelector("#ID").innerHTML = "▲ ID";
+    else  document.querySelector("#ID").innerHTML = "▼ ID";
     orderCheckid = !orderCheckid;
 }
 
 function nameClick() {
     showOrderData(2, orderCheckname);
+    if(orderCheckname) document.querySelector("#NAME").innerHTML = "▲ Name";
+    else  document.querySelector("#NAME").innerHTML = "▼ Name";
     orderCheckname = !orderCheckname;
 }
 
 function priceClick() {
     showOrderData(3, orderCheckprice);
+    if(orderCheckprice) document.querySelector("#PRICE").innerHTML = "▲ Price";
+    else  document.querySelector("#PRICE").innerHTML = "▼ Price";
     orderCheckprice = !orderCheckprice;
 }
 
 function showOrderData(type, order) {
     if (type == 1) {
-        for (i = 0; i < data.length ; i++) {
+        for (i = 0; i < data.length -1; i++) {
             for (j = i+1; j < data.length; j++) {
                 if (order) {
                     if (data[i].id < data[j].id) {
@@ -78,7 +87,7 @@ function showOrderData(type, order) {
             }
         }
     } if (type == 2) {
-        for (i = 0; i < data.length ; i++) {
+        for (i = 0; i < data.length -1; i++) {
             for (j = i+1; j < data.length; j++) {
                 if (order) {
                     if (data[i].name < data[j].name) {
@@ -97,7 +106,7 @@ function showOrderData(type, order) {
             }
         }
     } if (type == 3) {
-        for (i = 0; i < data.length ; i++) {
+        for (i = 0; i < data.length -1 ; i++) {
             for (j = i+1; j < data.length; j++) {
                 if (order) {
                     if (parseInt(data[i].price) < parseInt(data[j].price)) {
@@ -128,10 +137,8 @@ function showOrderData(type, order) {
         mtr = document.createElement("tr");
  
         t1.innerText = data[i].id;
-        //t2.innerText = data[i].name;
-        t2.innerHTML = "<input onclick ='change("+i+",1)' type='text' id='a"+i+"' value='"+data[i].name+"'style='border: none;'>";
-        //t3.innerText = data[i].price;
-        t3.innerHTML = "<input onclick ='change("+i+",2)' type='text' id='a"+i+"' value='"+data[i].price+"'style='border: none;'>";
+        t2.innerHTML = "<input onclick ='change("+i+",1)' type='text' id='name"+i+"' value='"+data[i].name+"' style='border: none;'>";
+        t3.innerHTML = "<input onclick ='change("+i+",2)' type='text' id='price"+i+"' value='"+data[i].price+"' style='border: none;'>";
 
         mtr.append(t1);
         mtr.append(t2);
@@ -140,17 +147,32 @@ function showOrderData(type, order) {
     }
 }
 function change(pp,check) {
-    document.querySelector("#a"+pp+"").readOnly = false;
-    document.querySelector("#a"+pp+"").style.outline = '';
-    document.querySelector("#a"+pp+"").onkeydown = function(evt) {
-       a=evt || evt.window;
-       if(a.key == "Escape") {
-            document.querySelector("#a"+pp+"").readOnly = true;
-            document.querySelector("#a"+pp+"").style.outline = 'none';
-       }
-       else if(a.key == "Enter"){
-            if(check == 1) data[pp].name = document.querySelector("#a"+pp+"").value;
-            else data[pp].price = document.querySelector("#a"+pp+"").value;
-       }
+    if(check == 1){
+        document.querySelector("#name"+pp+"").readOnly = false;
+        document.querySelector("#name"+pp+"").style.outline = '';
+        document.querySelector("#name"+pp+"").onkeydown = function(evt) {
+            a=evt;
+            if(a.key == "Escape") {
+                document.querySelector("#name"+pp+"").readOnly = true;
+                document.querySelector("#name"+pp+"").style.outline = 'none';
+            }
+            else if(a.key == "Enter"){
+                data[pp].name = document.querySelector("#name"+pp+"").value;
+            }
+        }
+    }
+    else{
+        document.querySelector("#price"+pp+"").readOnly = false;
+        document.querySelector("#price"+pp+"").style.outline = '';
+        document.querySelector("#price"+pp+"").onkeydown = function(evt) {
+            a=evt;
+            if(a.key == "Escape") {
+                document.querySelector("#price"+pp+"").readOnly = true;
+                document.querySelector("#price"+pp+"").style.outline = 'none';
+            }
+            else if(a.key == "Enter"){
+                data[pp].price = document.querySelector("#price"+pp+"").value;
+            }
+        }
     }
 }
