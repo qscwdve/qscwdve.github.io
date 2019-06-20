@@ -10,14 +10,14 @@ var photo = 0;
 var photo_name = [
     "Photo by Markus Spiske on Unsplash",
     "Photo by Diego PH on Unsplash",
-    "Photo by Debby Hudson on Unsplash",
-    "Photo by Rae Goldman on Unsplash"
+    "Photo by Cel Lisboa on Unsplash",
+    "Photo by Serghei Savchiuc on Unsplash"
 ];
 var photo_src = [
-    "markus-spiske-160542-unsplash.jpg",
-    "diego-ph-412514-unsplash.jpg",
-    "debby-hudson-526898-unsplash.jpg",
-    "rae-goldman-1264663-unsplash.jpg"
+    "https://images.unsplash.com/photo-1478676584648-9f4e1f30ec1c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80",
+    "https://images.unsplash.com/photo-1508020268086-b96cf4f4bb2e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80",
+    "https://images.unsplash.com/photo-1453831362806-3d5577f014a4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1038&q=80",
+    "https://images.unsplash.com/photo-1528975604071-b4dc52a2d18c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80"
 ]
 function picture(check){
     if(check == 1) photo--;
