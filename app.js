@@ -6,7 +6,7 @@ var info =1;
 var fin = -1;
 var sc = 1;
 var et = -1;
-var photo = 0;
+var photo = 3;
 var photo_name = [
     "Photo by Markus Spiske on Unsplash",
     "Photo by Diego PH on Unsplash",
