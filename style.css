@@ -1,22 +1,86 @@
 body{
     background-color: pink;
 }
-#text{
-    font-size: 18px;
-    width: 120px;
+#line{
+    background-color: rgb(119, 7, 67); 
+    width: 100%;
+    height: 250px;
+}
+#picture{
+    width: 50%;
+    height: 650px;
+    border: 3px solid rgb(119, 7, 67); 
+}
+h3{
+    margin-left: 60px;
+}
+h2{
+    margin-left: 150px;
+}
+#pic_but{
+    background-color: pink;
+    width: 55px;
+    height: 45px;
+    border: 3px solid rgb(119, 7, 67); 
+    font-size: 23px;
+}
+#picture_name{
+    margin-top: 270px;
+    margin-left: 70px;
+    font-size: 30px;
+}
+#picture_title{
+    text-align: center;
 }
 
-#line{
-    height:5px;
-    background-color: black;
-    border-radius: 10%;
+ul{
+    font-size: 20px;
+    margin-left: 30px;
 }
-#image{
-    width: 650px;
-    height: 500px;
-    border: 3px solid black;
+@media screen and (min-width:600px){
+    #line{
+        display:flex;
+    }
+    #photo{
+        display: flex;
+    }
 }
-#text2{
-    font-size: 18px;
-    width: 270px;
+#box{
+    width: 260px;
+}
+#box2{
+    width: 260px;
+}
+#box3{
+    width: 260px;
+}
+#box4{
+    width: 260px;
+}
+#box5{
+    width: 260px;
+}
+#box6{
+    width: 260px;
+}
+#box7{
+    width: 260px;
+}
+#butt{
+    margin-top: 25px;
+    margin-left: 30px;
+    width: 260px;
+    height: 30px;
+    font-size: 20px;
+    background-color: rgb(119, 7, 67);
+    border: 1px solid pink;
+    color: white;
+}
+#butt:hover{
+    background-color: pink;
+    color: black;
+}
+#pic_but:hover{
+    background-color: rgb(119, 7, 67);
+    color: white;
 }

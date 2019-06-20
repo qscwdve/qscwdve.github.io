@@ -2,33 +2,67 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width= , initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" type="text/css" href="style.css">
     <title>Document</title>
 </head>
 <body>
-    <h1>&nbsp;Welcome to My page! </h1>
-    <div id = "line"></div><br>
-    <img src = "image.jpg" id = "image">
-    <h2>&nbsp;&nbsp;exercise list</h2>
-    <ul id = "text">
-        <a href="exer04/index.html" ><li>exercise #04</li></a>
-        <a href="jsexer01/index.html"><li>jsexer #01</li></a>
-        <a href="jsexer02/index.html"><li>jsexer #02</li></a>
-        <a href="jsexer03/index.html"><li>jsexer #03</li></a>
-        <a href="bb3/index.html"><li>bb3</li></a>
-    </ul>
-    <h2>&nbsp;&nbsp;homework list</h2>
-    <ul id = "text2">
-        <a href="homework/cssprogram.html" ><li>Homework #1 : CSS animation</li></a>
-        <a href="homework2/javascript.html" ><li>Homework #2 : My gallery</li></a>
-        <a href="homework3/index.html" ><li>Homework #3 : Calculator</li></a>
-        <a href="bb3/index.html"><li>Homework #4 : ball control</li></a>
-    </ul>
-    <h2>&nbsp;&nbsp;Midterm Project</h2>
-    <ul id="text2">
-        <a href="Midterm/index.html"><li>midterm-project</li></a>
-    </ul>
+    <div id="title"><h1>&nbsp;&nbsp;Welcome to My page! </h1></div>
+    <div id="line">    
+        <div id="box">
+            <input type="button" value="exercise list" id="butt" onclick="change_ex()">
+            <ul id = "text">
+                    <a href='exer04/index.html' ><font color='white'><li>exercise#04</li></font></a>
+                    <a href='jsexer01/index.html'><font color='white'><li>jsexer #01</li></font></a>
+                    <a href='jsexer02/index.html'><font color='white'><li>jsexer #02</li></font></a>
+                    <a href='jsexer03/index.html'><font color='white'><li>jsexer #03</li></font></a>
+                    <a href='bb3/index.html'><font color='white'><li>bb3</li></font></a>
+            </ul>
+        </div>
+        <div id="box2">
+            <input type="button" value="homework list" id="butt" onclick="change_ho()">
+            <ul id = "text2">
+            </ul>
+        </div>
+        <div id="box3">
+            <input type="button" value="Midterm Project" id="butt" onclick="change_mi()">
+            <ul id="text3">
+            </ul>
+        </div>
+        <div id="box5">
+            <input type="button" value="Final Project" id="butt" onclick="change_fin()">
+            <ul id="text5">
+                <a href="finaltest/login.php" ><font color='white'><li>final-project</li></font></a>
+            </ul>
+        </div>
+        <div id="box4">
+                <input type="button" value="information" id="butt" onclick="change_in()">
+                <ul id="text4">
+                </ul>
+        </div>
+        <div id="box6">
+                <input type="button" value="school" id="butt" onclick="change_sc()">
+                <ul id="text6">
+                </ul>
+        </div>
+        <div id="box7">
+                <input type="button" value="etc" id="butt" onclick="change_et()">
+                <ul id="text7">
+                        <a href='https://www.google.com' ><font color='white'><li>Google</li></font></a>
+                        <a href='https://www.naver.com' ><font color='white'><li>NAVER</li></font></a>
+                </ul>
+        </div>
+    </div>
+    <br> 
+    <div id="photo">
+        <img src="markus-spiske-160542-unsplash.jpg" id="picture"><br>
+        <infotext id="picture_name">
+            <h2><input type="button" value="◀" onclick="picture(1)" id="pic_but">&nbsp;&nbsp; Next picture &nbsp;&nbsp;
+            <input type="button" id="pic_but" value="▶" onclick="picture(0)"></h2>
+            <h3 id="pic_title">Photo by Markus Spiske on Unsplash</h3>
+        </infotext>
+    </div>
+    <script src="app.js"></script>
 </body>
 </html>
